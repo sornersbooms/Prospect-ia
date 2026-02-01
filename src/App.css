@@ -1,0 +1,218 @@
+/* --- URGENCY BANNER --- */
+.urgency-banner {
+    background: linear-gradient(90deg, #ff4d4d 0%, #f59e0b 50%, #ff4d4d 100%);
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 0;
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1000;
+    /* Ensure it's above nav if needed, or adjust nav z-index */
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.timer-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    margin: 0 4px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
+}
+
+nav {
+    top: 54px;
+    /* Adjusted for larger banner */
+}
+
+/* --- VSL WRAPPER --- */
+.vsl-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+.vsl-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #1e1b4b, #312e81);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.video-placeholder:hover {
+    background: linear-gradient(45deg, #312e81, #4338ca);
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s;
+}
+
+.video-placeholder:hover .play-button {
+    transform: scale(1.1);
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.vsl-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- LARGE BUTTON --- */
+.btn-large {
+    font-size: 1.3rem;
+    padding: 20px 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .urgency-banner {
+        font-size: 0.8rem;
+    }
+
+    .btn-large {
+        font-size: 1.1rem;
+        padding: 16px 20px;
+    }
+
+    nav {
+        top: 0;
+        position: static;
+    }
+
+    /* On mobile, let it flow naturally or fix urgency top */
+}
+
+/* --- COMPARISON TABLE --- */
+.comparison-section {
+    padding: 100px 0;
+    background: #0f172a;
+}
+
+.comparison-table {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    border-bottom: 2px solid var(--glass-border);
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: center;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.col-us {
+    color: var(--success);
+    font-weight: 700;
+    background: rgba(16, 185, 129, 0.05);
+    margin: -20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.col-competitor {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.text-red {
+    color: #f87171;
+}
+
+.text-green {
+    color: #4ade80;
+}
+
+@media (max-width: 768px) {
+
+    .comparison-header,
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .col-us {
+        margin: 0;
+        padding: 10px;
+        border: none;
+        justify-content: center;
+    }
+}
