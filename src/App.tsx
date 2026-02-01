@@ -125,16 +125,27 @@ function App() {
                     {/* --- VIDEO SALES LETTER (VSL) CONTAINER --- */}
                     <div className="vsl-container">
                         <div className="vsl-wrapper">
-                            {/* PLACEHOLDER PARA TU VIDEO - REEMPLAZAR IFRAME */}
-                            <div className="video-placeholder">
+                            {/* --- VIDEO: Reemplaza 'VIDEO_ID' con el ID de tu video de YouTube o Vimeo --- */}
+
+                            {/* OPCIÓN 1: YOUTUBE (ACTIVA) */}
+                            {/* ⚠️ IMPORTANTE: Reemplaza 'TU_ID_AQUI' en la URL de abajo con el ID de tu video */}
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/WhwZNBTVhIk?rel=0&modestbranding=1&autoplay=0"
+                                title="Prospect IA Demo"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+
+                            {/* PLACEHOLDER (Oculto) */}
+                            {/* <div className="video-placeholder">
                                 <div className="play-button">
                                     <Play size={40} fill="currentColor" />
                                 </div>
-                                <span>Ver cómo funciona (2 min)</span>
-                            </div>
-                            {/* Ejemplo de cuando pongas el video real:
-                 <iframe src="https://player.vimeo.com/video/TU_ID_VIDEO" allow="autoplay; fullscreen" allowFullScreen></iframe>
-                 */}
+                                <span>Video Cargando...</span>
+                            </div> */}
                         </div>
                     </div>
 
