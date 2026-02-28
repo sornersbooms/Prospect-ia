@@ -36,8 +36,8 @@ function App() {
     }, []);
 
     const handleCheckout = () => {
-        // Link real de Hotmart
-        window.location.href = "https://pay.hotmart.com/Y104204633R?checkoutMode=10";
+        // Link real de Whop
+        window.location.href = "https://whop.com/checkout/plan_g19INyh80sFhm";
     };
 
     const toggleFaq = (index: number) => {
