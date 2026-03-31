@@ -37,7 +37,7 @@ function App() {
 
     const handleCheckout = () => {
         // Link real de Whop
-        window.location.href = "https://whop.com/checkout/plan_g19INyh80sFhm";
+        window.location.href = "https://wa.link/ppslc6";
     };
 
     const toggleFaq = (index: number) => {
